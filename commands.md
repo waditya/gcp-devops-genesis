@@ -2,7 +2,9 @@
 
 1. Command to create image locally 
 
+```shell
 docker build --tag python-docker-image .
+```
 
 2. Command to list the image
 
