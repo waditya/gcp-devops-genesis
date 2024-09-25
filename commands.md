@@ -33,8 +33,52 @@ admin@docker-host:~/gcp-devops-project$ docker build --tag python-docker-image .
 docker images
 ```
 
+```console
+admin@docker-host:~/gcp-devops-project$ docker images
+REPOSITORY            TAG       IMAGE ID       CREATED          SIZE
+python-docker-image   latest    47ea3d67130c   13 seconds ago   129MB
+<none>                <none>    54d90786d46b   2 minutes ago    129MB
+<none>                <none>    4eb99edba74c   6 minutes ago    129MB
+```
+
 3. Command to run a docker image
 
 ```shell
 docker run -p 5000:5000 python-docker-image
+```
+
+```console
+admin@docker-host:~/gcp-devops-project$ docker run -p 5000:5000 python-docker-image
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.12.0.2:5000
+Press CTRL+C to quit
+172.12.0.1 - - [25/Sep/2024 03:52:11] "GET / HTTP/1.1" 200 -
+172.12.0.1 - - [25/Sep/2024 03:52:28] "GET / HTTP/1.1" 200 -
+172.12.0.1 - - [25/Sep/2024 03:53:29] "GET / HTTP/1.1" 200 -
+172.12.0.1 - - [25/Sep/2024 04:06:12] "GET / HTTP/1.1" 200 -
+172.12.0.1 - - [25/Sep/2024 04:06:14] "GET / HTTP/1.1" 200 -
+172.12.0.1 - - [25/Sep/2024 04:06:44] "GET / HTTP/1.1" 200 -
+172.12.0.1 - - [25/Sep/2024 04:06:47] "GET / HTTP/1.1" 200 -
+172.12.0.1 - - [25/Sep/2024 04:06:48] "GET / HTTP/1.1" 200 -
+172.12.0.1 - - [25/Sep/2024 04:06:49] "GET / HTTP/1.1" 200 -
+172.12.0.1 - - [25/Sep/2024 04:06:50] "GET / HTTP/1.1" 200 -
+172.12.0.1 - - [25/Sep/2024 04:06:50] "GET / HTTP/1.1" 200 -
+172.12.0.1 - - [25/Sep/2024 04:06:51] "GET / HTTP/1.1" 200 -
+172.12.0.1 - - [25/Sep/2024 04:06:52] "GET / HTTP/1.1" 200 -
+```
+
+4. Testing the Application
+
+
+```console
+admin@docker-host:~$ curl http://localhost:5000 && echo ""
+Hello, Simple Flask Application
+admin@docker-host:~$ curl http://localhost:5000 && echo ""
+Hello, Simple Flask Application
+admin@docker-host:~$ 
+admin@docker-host:~$ curl http://localhost:5000 && echo ""
+Hello, Simple Flask Application
 ```
