@@ -24,4 +24,7 @@
 | Storing the image | GCP Artifact Registry | 
 | Deploy to GKE cluster | Cloud Build |  
 
+6. Tasks for next Sprint
+   i. Build and Store Docker Image
+   ii. Deploy Docker image to GKE
 
