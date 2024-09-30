@@ -15,3 +15,13 @@
    b. Store the docker image in an artifactory
    c. Write manifest files for deployment , service and/or ingress and horizontal pod autoscaler
    d. Setup CD to deploy the code to GKE using the docker image stored in artifactory.
+
+5. What tools in GCP can help us achieve task#4 
+
+| Task | GCP Service |
+| : ---------------------------------------------------- | :-----------: |
+| Automate way to build the docker image from Git code | Cloud Build |
+| Storing the image | GCP Artifact Registry | 
+| Deploy to GKE cluster | Cloud Build |  
+
+
