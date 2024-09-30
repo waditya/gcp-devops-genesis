@@ -23,3 +23,10 @@ Goals of the Sprint -
 3. Pricing : E2 - Medium serverless $0.003 per build/minute
 4. Code: Written in YAML file 
    Example - Unlike CloudBuild, a user of Jenkin will have to write the deployment logic in Groovy script.
+
+### Connecting Cloud Build to GitHub
+
+1. Use Cloud Build Trigger to connect GitHub and Cloud Build
+2. Trigger is an event which will start the Cloud Build branch
+3. Any push on the main branch will trigger Cloud Build
+4. Cloudbuild.yaml file shall contain the Continuous Deployment (CD) Code
