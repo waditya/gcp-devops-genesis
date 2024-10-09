@@ -1,4 +1,6 @@
-## Sprint-04
+## Sprint-05
+
+## Goals for this sprint
 
 1. Creating a namespace in out GKE cluster
 2. Creating a deployment file
